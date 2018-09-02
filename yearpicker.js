@@ -1,32 +1,49 @@
+const version = '1.0.0';
+const appName = 'YearPicker';
+
+
 (function ($) {
     'use strict';
 
-    // var _setupError = 'YearPicker Error';
-    // if (!($) || !($.moment)) {
-    //     alert('The jQuery and moment.js plugin must be loaded!!');
-    //     return;
-    // }
+    var _setupError = 'YearPicker Error';
+    if (typeof jQuery === 'undefined') {
+        alert(`${appName} ${version} requires jQuery`);
+        return;
+    }
+
 
     $.fn.yearpicker = function (options) {
         var defaults = {
-            minDate: "1900",
-            maxDate: "",
-            date: "",
+            minYear: "1900",
+            maxYear: "",
         };
+
         var $settings = $.extend({}, defaults, options)
 
         var $currentYear = new Date().getFullYear();
-        var $yearpicker = $(this);
+        
+        function yearpicker(yearpicker, settings){
+            this.$yearpicker = yearpicker;
+            this.$settings = settings;
+            this.create();
+        }
 
-        debug($yearpicker);
-        log($yearpicker);
-        log($currentYear);
-        $yearpicker.val($currentYear);
+        // yearpicker
+        yearpicker.prototype = {
+            create: function() {
+                log(this.$yearpicker);
+                $(this.$yearpicker).val($currentYear);
+            }
+        }
 
-        $('.yearpicker-year .yearpicker-items').on('click', function () {
-            var selectedDate = $(this).html();
-            $yearpicker.val(selectedDate);
-        })
+        return this.each(function() {
+            var data = $(this).data('yearpicker');
+            log(data);
+            if (!data) {
+                data = new yearpicker(this, $settings);
+                $(this).data('yearpicker001', data);
+            }
+        });
     }
     var debug = (obj) => {
         if (window.console && window.console.log) {
@@ -40,6 +57,13 @@
         }
     }
 
+    
+    $('.yearpicker-year .yearpicker-items').on('click', function () {
+        var selectedDate = $(this).html();
+        log($yearpicker);
+        log(this.$yearpicker);
+        $yearpicker.val(selectedDate);
+    })
 
 
 }(jQuery));
