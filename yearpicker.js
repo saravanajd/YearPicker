@@ -2,6 +2,25 @@ const version = '1.0.0';
 const appName = 'YearPicker';
 
 
+var defaults = {
+    // Auto Hide
+    autoHide: true,
+    // The Initial Date
+    date: null,
+    // Start Date
+    startDate: null,
+    // End Date
+    endDate: null,
+    // A element tag items
+    itemTag: 'li',
+    //css class selected date item 
+    selectedClass:  'selectedClass',
+    // css class disabled
+    disabledClass: ''
+
+
+}
+
 (function ($) {
     'use strict';
 
