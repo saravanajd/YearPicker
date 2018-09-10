@@ -1,16 +1,18 @@
 :root {
-    --background-color:#fff;
+    --background-color: #fff;
     --border-color: #333;
     --text-color: #555;
     --selected-text-color: rgb(56, 241, 164);
-    --hover-background-color:#eee;
+    --hover-background-color: #eee;
 }
 
 .yearpicker-container {
+    position: absolute;
     color: var(--text-color);
     width: 280px;
     border: 1px solid var(--border-color);
     border-radius: 3px;
+    font-size: 1rem;
 }
 
 .yearpicker-header {
@@ -20,6 +22,12 @@
     border-bottom: 1px solid #333;
     align-items: center;
     justify-content: space-around;
+}
+
+.yearpicker-prev,
+.yearpicker-next {
+    cursor: pointer;
+    font-size: 1.5rem;
 }
 
 .yearpicker-year {
@@ -37,12 +45,16 @@
     flex: 0 0 33.3%;
     width: 100%;
 }
-.yearpicker-items:hover{
+
+.yearpicker-items:hover {
     background-color: var(--hover-background-color);
-    color:var(--selected-text-color);
+    color: var(--selected-text-color);
     cursor: pointer;
 }
 
-.yearpicker-items.active{
-    color:var(--selected-text-color);
+.yearpicker-items.selected {
+    color: var(--selected-text-color);
+}
+.hide{
+    display: none;
 }
