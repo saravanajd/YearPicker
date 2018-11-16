@@ -8,9 +8,9 @@ YearPicker.js is a lightweight yet configurable year picker for jQuery that make
 ```
 
 ### How do use yearpicker
-'''
+```
 $('.yearpicker').yearpicker()
-'''
+```
 
 ### All default options to customize the year picker
 ```
