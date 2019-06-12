@@ -13,7 +13,7 @@
     border: 1px solid var(--border-color);
     border-radius: 3px;
     font-size: 1rem;
-    box-shadow: 1px 1px 8px 0px rgba(0,0,0,0.2);
+    box-shadow: 1px 1px 8px 0px rgba(0, 0, 0, 0.2);
     background-color: var(--background-color);
 }
 
@@ -62,6 +62,12 @@
 .yearpicker-items.selected {
     color: var(--selected-text-color);
 }
-.hide{
+
+.hide {
     display: none;
+}
+
+.yearpicker-items.disabled {
+    pointer-events: none;
+    color: #bbb;
 }
