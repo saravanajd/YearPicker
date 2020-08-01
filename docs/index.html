@@ -59,9 +59,9 @@
     </script>
 
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
-    <link rel="stylesheet" href="/src/css/style.css" />
-  </head>
+    <link rel="stylesheet" href="style.css" />
 
+  </head>
   <body>
     <div class="container">
       <div class="page-header">
@@ -137,8 +137,8 @@
                 <p class="intro">
                   YearPicker.js is a lightweight yet configurable yearpicker for
                   jQuery that makes it easy to select a year from a popup
-                  similar to the date picker. This plugin allows you to easily
-                  customaize the YearPicker the way you want it to.
+                  similar to the date picker. This plugin allows you to
+                  easily customaize the YearPicker the way you want it to.
                 </p>
               </section>
             </div>
@@ -172,26 +172,27 @@
                 </div>
                 <div class="col-9" style="padding: 0 1rem;">
                   <strong>Code</strong>
-                  <pre class="pre">$(".yearpicker").yearpicker()</pre>
+                  <pre class="pre">
+$(".yearpicker").yearpicker()</pre
+                  >
                 </div>
               </div>
             </section>
             <section id="Events">
               <h3>Events</h3>
               <p class="intro">
-                YearPicker allows you to invokes a function like on value
-                changed, onShow, onHide.
+                YearPicker allows you to invokes a function like on value changed, onShow, onHide.
               </p>
               <div class="row">
                 <div class="col-3">
                   <strong>Examples</strong>
                   <div class="form-group">
                     <input
-                      id="example2"
-                      type="text"
-                      class="form-control"
-                      value=""
-                    />
+                    id="example2"
+                    type="text"
+                    class="form-control"
+                    value=""
+                  />
                   </div>
                 </div>
                 <div class="col-9" style="padding: 0 1rem;">
@@ -214,8 +215,7 @@ $(".yearpicker").yearpicker({
   onChange : function(value){
     // YOUR CODE COMES_HERE
   }
-});</pre
-                    >
+});</pre>
                   </div>
                 </div>
               </div>
@@ -238,11 +238,11 @@ $(".yearpicker").yearpicker({
       </div>
     </div>
 
-    <script src="/src/js/jquery.min.js"></script>
-    <script src="/src/js/core.js"></script>
+    <script src="jquery.min.js"></script>
+    <script src="core.js"></script>
 
-    <link rel="stylesheet" href="/dist/yearpicker.css" />
-    <script src="/dist/yearpicker.js"></script>
+    <link rel="stylesheet" href="yearpicker.css" />
+    <script src="yearpicker.js"></script>
 
     <script>
       $(document).ready(function () {
@@ -254,9 +254,9 @@ $(".yearpicker").yearpicker({
         $("#example2").yearpicker({
           startYear: new Date().getFullYear() - 10,
           endYear: new Date().getFullYear() + 10,
-          onChange: function (value) {
-            $("#OutputContainer").html(value);
-          },
+          onChange : function(value){
+            $('#OutputContainer').html(value);
+          }
         });
       });
     </script>
