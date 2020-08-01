@@ -2,7 +2,7 @@
 
 YearPicker.js is a lightweight yet configurable year picker for jQuery that makes it easy to select a year from a popup similar to the date picker.
 
-### Add the class yearpicker
+### Demo
 
 You can view a live demo and some examples of how to use the various options [here](https://saravanajd.github.io/YearPicker/).
 
