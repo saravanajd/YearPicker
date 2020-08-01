@@ -1,0 +1,50 @@
+[
+  {
+    "Property": "year",
+    "Default": "null",
+    "Required": false,
+    "Description": "Number"
+  },
+  {
+    "Property": "startYear",
+    "Default": "null",
+    "Required": false,
+    "Description": "Number"
+  },
+  {
+    "Property": "endYear",
+    "Default": "null",
+    "Required": false,
+    "Description": "Number"
+  },
+  {
+    "Property": "selectedClass",
+    "Default": "selected",
+    "Required": false,
+    "Description": "Class will be added to the selected item"
+  },
+  {
+    "Property": "disabledClass",
+    "Default": "disabled",
+    "Required": false,
+    "Description": "Class will be added to the disabled items"
+  },
+  {
+    "Property": "onChange",
+    "Default": "null",
+    "Required": false,
+    "Description": "A callback function that fires when the selected value is changed"
+  },
+  {
+    "Property": "onShow",
+    "Default": "null",
+    "Required": false,
+    "Description": "A callback function that fires when a yearpicker is show"
+  },
+  {
+    "Property": "onHide",
+    "Default": "null",
+    "Required": false,
+    "Description": "A callback function that fires when a yearpicker is hide"
+  }
+]

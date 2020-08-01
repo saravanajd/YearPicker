@@ -4,32 +4,210 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>YearPicker - A custom picker for select only year</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="yearpicker.css" />
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script> -->
-    <script src="jquery.min.js"></script>
+    <title>YearPicker Plugin</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+
+    <link rel="stylesheet" href="/src/css/style.css" />
   </head>
 
   <body>
     <div class="container">
-      <div class="title">
-        <h1>YearPicker</h1>
+      <div class="page-header">
+        <header>
+          <div class="menu-toggle">
+            <svg viewBox="0 0 512 512">
+              <path
+                d="M64 384h384v-42.666H64V384zm0-106.666h384v-42.667H64v42.667zM64 128v42.665h384V128H64z"
+              ></path>
+            </svg>
+          </div>
+          <div class="logo">YearPicker</div>
+          <nav class="util-nav">
+            <a
+              class="btn"
+              href="https://github.com/saravanajd/YearPicker/archive/master.zip"
+              style="margin-right: 1rem;"
+            >
+              Download
+            </a>
+            <a
+              class="social"
+              href="https://github.com/saravanajd"
+              target="_blank"
+              title="GitHub"
+              preserveaspectratio="xMidYMid meet"
+            >
+              <svg viewBox="0 0 512 512">
+                <path
+                  d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"
+                ></path>
+              </svg>
+            </a>
+          </nav>
+        </header>
       </div>
-      <div class="main">
-        <h2>Select Year</h2>
-        <input type="text" class="yearpicker form-control" value="" />
+      <div class="page-sidemenu">
+        <div class="sidemenu-header">
+          <a href="#">YearPicker</a>
+        </div>
+        <div>
+          <ul class="nav">
+            <li>
+              <section>
+                <ul class="nav-sub menu">
+                  <li><a href="#">What is YearPicker</a></li>
+                  <li><a href="#Installation">Installation</a></li>
+                  <li><a href="#usage">Basic Usage</a></li>
+                  <li><a href="#Events">Events</a></li>
+                  <li><a href="#Options">Options</a></li>
+                </ul>
+              </section>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="page-content">
+        <main>
+          <article>
+            <h1 style="margin-top: 0;">YearPicker</h1>
+            <div class="table-of-contents">
+              <strong class="nav-header" style="padding: 0px;">Contents</strong>
+              <nav>
+                <ul class="menu">
+                  <li><a href="#Installation">Installation</a></li>
+                  <li><a href="#usage">Basic Usage</a></li>
+                  <li><a href="#Events">Events</a></li>
+                  <li><a href="#Options">Options</a></li>
+                </ul>
+              </nav>
+              <section>
+                <h3>What is YearPicker</h3>
+                <p class="intro">
+                  YearPicker.js is a lightweight yet configurable yearpicker for
+                  jQuery that makes it easy to select a year from a popup
+                  similar to the date picker. This plugin allows you to
+                  easily customaize the YearPicker the way you want it to.
+                </p>
+              </section>
+            </div>
+            <section id="Installation">
+              <h3>Installation</h3>
+              <p class="intro">
+                Include the script <span>yearpicker.js</span> and Stylesheet
+                <span>yearpicker.css</span> on the webpage
+              </p>
+              <pre class="pre">
+&lt;link rel='stylesheet' href='yearpicker.css' /&gt;
+&lt;script src= 'yearpicker.js'&gt;&lt;/script&gt;</pre
+              >
+            </section>
+            <section id="usage">
+              <h3>Basic Usage</h3>
+              <p class="intro">
+                The basic use of yearpicker.js plugin with a related javascript
+                code
+              </p>
+              <div class="row">
+                <div class="col-3">
+                  <strong>Examples</strong>
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      class="yearpicker form-control"
+                      value=""
+                    />
+                  </div>
+                </div>
+                <div class="col-9" style="padding: 0 1rem;">
+                  <strong>Code</strong>
+                  <pre class="pre">
+$(".yearpicker").yearpicker()</pre
+                  >
+                </div>
+              </div>
+            </section>
+            <section id="Events">
+              <h3>Events</h3>
+              <p class="intro">
+                YearPicker allows you to invokes a function like on value changed, onShow, onHide.
+              </p>
+              <div class="row">
+                <div class="col-3">
+                  <strong>Examples</strong>
+                  <div class="form-group">
+                    <input
+                    id="example2"
+                    type="text"
+                    class="form-control"
+                    value=""
+                  />
+                  </div>
+                </div>
+                <div class="col-9" style="padding: 0 1rem;">
+                  <div>
+                    <strong>Selected Value</strong>
+                    <div
+                      style="
+                        background: #f6f8fa;
+                        padding: 0 1rem;
+                        margin-bottom: 0.5rem;
+                      "
+                    >
+                      <div id="OutputContainer">
+                        -
+                      </div>
+                    </div>
+                    <strong>Code:</strong>
+                    <pre class="pre">
+$(".yearpicker").yearpicker({
+  onChange : function(value){
+    // YOUR CODE COMES_HERE
+  }
+});</pre>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section id="Options">
+              <h3>Options</h3>
+              <table id="tblSettings">
+                <thead>
+                  <tr>
+                    <th>Property</th>
+                    <th>Default</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </section>
+          </article>
+        </main>
       </div>
     </div>
-    <script src="yearpicker.js"></script>
+
+    <script src="/src/js/jquery.min.js"></script>
+    <script src="/src/js/core.js"></script>
+
+    <link rel="stylesheet" href="/dist/yearpicker.css" />
+    <script src="/dist/yearpicker.js"></script>
+
     <script>
-      $(document).ready(function() {
+      $(document).ready(function () {
         $(".yearpicker").yearpicker({
-          year: 2017,
-          startYear: 2012,
-          endYear: 2030
+          startYear: new Date().getFullYear() - 10,
+          endYear: new Date().getFullYear() + 10,
         });
+
+        $("#example2").yearpicker({
+          startYear: new Date().getFullYear() - 10,
+          endYear: new Date().getFullYear() + 10,
+          onChange : function(value){
+            $('#OutputContainer').html(value);
+          }
+        });
+
+        
       });
     </script>
   </body>

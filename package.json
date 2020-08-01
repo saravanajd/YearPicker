@@ -1,0 +1,29 @@
+{
+  "name": "yearpicker.js",
+  "version": "1.0.1",
+  "description": "YearPicker.js is a lightweight yet configurable year picker for jQuery that makes it easy to select a year from a popup similar to the date picker.",
+  "main": "dist/yearpicker.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saravanajd/YearPicker.git"
+  },
+  "keywords": [
+    "yearpicker",
+    "yearpicker.js",
+    "picker",
+    "jquery YearPicker",
+    "jquery yearpicker.js"
+  ],
+  "author": "SaravanaJd",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/saravanajd/YearPicker/issues"
+  },
+  "homepage": "https://github.com/saravanajd/YearPicker#readme"
+}
