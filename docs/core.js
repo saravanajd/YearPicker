@@ -1,6 +1,6 @@
 // Load Options 
 $.ajax({
-    url: '/src/js/Options.json',
+    url: 'Options.json',
     success: function (data) {
         if (!data) {
             return;
