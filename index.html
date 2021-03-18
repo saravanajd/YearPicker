@@ -252,6 +252,7 @@ $(".yearpicker").yearpicker({
         });
 
         $("#example2").yearpicker({
+          year: new Date().getFullYear(),
           startYear: new Date().getFullYear() - 10,
           endYear: new Date().getFullYear() + 10,
           onChange: function (value) {

@@ -265,12 +265,13 @@ const Yearpicker = (function () {
       $this.initialValue = defaultYear;
       $this.oldValue = defaultYear;
 
+      const currentYear = new Date().getFullYear();
       // set the defaultyear
-      year = year || defaultYear || new Date().getFullYear();
+      year = year || defaultYear || null;
 
       // set the startyear
       if (startYear) {
-        if (year < startYear) {
+        if (year && year < startYear) {
           year = startYear;
         }
         $this.startYear = startYear;
@@ -278,15 +279,15 @@ const Yearpicker = (function () {
 
       // set the endyear
       if (endYear) {
-        if (year > endYear) {
+        if (year && year > endYear) {
           year = endYear;
         }
         $this.endYear = endYear;
       }
 
       $this.year = year;
-      $this.viewYear = year;
-      $this.initialYear = year;
+      $this.viewYear = year || currentYear;
+      $this.initialYear = year || currentYear;
 
       $this.bind();
 
@@ -296,7 +297,6 @@ const Yearpicker = (function () {
       $this.yearsBody = $template.find(".yearpicker-year");
 
       $template.addClass(options.hideClass);
-      console.log("Yearpicker -> $template", $template);
       $element.after($template.addClass(namespace + "-dropdown"));
       $this.renderYear();
     },
