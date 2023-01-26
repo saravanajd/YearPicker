@@ -315,9 +315,7 @@ const Yearpicker = (function () {
       if ($.isFunction(options.click)) {
         $element.on(event_click, options.click);
       }
-      if ($this.isInput) {
-        $element.on(event_focus, $.proxy($this.showView, $this));
-      } else {
+     else {
         $element.on(event_click, $.proxy($this.showView, $this));
       }
     },
