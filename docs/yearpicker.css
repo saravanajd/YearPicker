@@ -2,14 +2,17 @@
     --background-color: #fff;
     --border-color: #ccc;
     --text-color: #555;
-    --selected-text-color: rgb(56, 241, 164);
+    --selected-text-color: rgb(56, 142, 241);
     --hover-background-color: #eee;
 }
 
 .yearpicker-container {
     position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
     color: var(--text-color);
-    width: 280px;
+    width: 250px;
     border: 1px solid var(--border-color);
     border-radius: 3px;
     font-size: 1rem;
@@ -22,9 +25,9 @@
 .yearpicker-header {
     display: flex;
     width: 100%;
-    height: 2.5rem;
+    height: 3.3rem;
     border-bottom: 1px solid var(--border-color);
-    align-items: center;
+    align-items: top;
     justify-content: space-around;
 }
 
@@ -39,6 +42,12 @@
     color: var(--selected-text-color);
 }
 
+.yearpicker-current {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .yearpicker-year {
     display: flex;
     flex-wrap: wrap;
@@ -46,13 +55,16 @@
     justify-content: center;
     text-align: center;
     padding: 0.5rem;
+    margin-bottom: -1.2px;
 }
 
 .yearpicker-items {
     list-style: none;
-    padding: 1rem 0.5rem;
-    flex: 0 0 33.3%;
+    padding: 0.5rem 0.5rem;
+    border-radius: 10px;
+    flex: 33.3%;
     width: 100%;
+    margin: 2.5px;
 }
 
 .yearpicker-items:hover {
@@ -62,7 +74,8 @@
 }
 
 .yearpicker-items.selected {
-    color: var(--selected-text-color);
+    color: var(--background-color);
+    background-color: var(--selected-text-color);
 }
 
 .hide {
@@ -72,4 +85,28 @@
 .yearpicker-items.disabled {
     pointer-events: none;
     color: #bbb;
+}
+
+@media (max-width: 380px) {
+    .yearpicker-container {
+        width: 150px !important;
+    }
+
+    .yearpicker-header {
+        font-size: 12px !important;
+        height: 2.5rem !important;
+    }
+
+    .yearpicker-prev,
+    .yearpicker-next {
+        font-size: 1.5rem !important;
+    }
+
+    .yearpicker-year {
+        margin-bottom: -1px !important;
+    }
+
+    .yearpicker-items {
+        font-size: 10px !important;
+    }
 }
